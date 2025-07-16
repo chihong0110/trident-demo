@@ -8,5 +8,5 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 11Gi
-  storageClassName: netapp-sc
+      storage: 10Gi
+  storageClassName: netapp-nfs
