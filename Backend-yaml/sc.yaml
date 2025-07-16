@@ -3,11 +3,9 @@ kind: StorageClass
 metadata:
   annotations:
     storageclass.kubernetes.io/is-default-class: "true"
-  name: netapp-sc
+  name: netapp-nas
 provisioner: csi.trident.netapp.io
 parameters:
-  selector: "svm=prod-svm"
-    #  trident.netapp.io/replication: "true"
-    #  backendType: "ontap-nas"
+  selector: "svm="
 allowVolumeExpansion: true
 reclaimPolicy: Delete
