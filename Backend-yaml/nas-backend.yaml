@@ -1,11 +1,11 @@
 apiVersion: trident.netapp.io/v1
 kind: TridentBackendConfig
 metadata:
-  name: netapp-nas
+  name: netapp-nfs
   namespace: trident
 spec:
   version: 1
-  backendName: netapp-nas
+  backendName: netapp-nfs
   storageDriverName: ontap-nas
   managementLIF: 
   dataLIF: 
