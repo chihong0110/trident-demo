@@ -4,5 +4,5 @@ metadata:
   name: svm-cred
 type: Opaque
 stringData:
-  username: vsadmin
-  password: P@ssw0rd
+  username: 
+  password: 
