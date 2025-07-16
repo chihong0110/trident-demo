@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+   name: image-registry-storage
+   namespace: openshift-image-registry
+spec:
+   storageClassName: netapp-sc
+   accessModes:
+      - ReadWriteMany
+   resources:
+      requests:
+         storage: 100Gi
