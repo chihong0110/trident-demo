@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-   name: image-registry-storage
-   namespace: openshift-image-registry
+   name: 
+   namespace: 
 spec:
-   storageClassName: netapp-sc
+   storageClassName: netapp-nas
    accessModes:
       - ReadWriteMany
    resources:
