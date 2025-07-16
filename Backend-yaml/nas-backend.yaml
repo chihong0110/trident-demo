@@ -1,20 +1,20 @@
 apiVersion: trident.netapp.io/v1
 kind: TridentBackendConfig
 metadata:
-  name: prod-svm
+  name: netapp-nas
   namespace: trident
 spec:
   version: 1
-  backendName: prod-svm
+  backendName: netapp-nas
   storageDriverName: ontap-nas
-  managementLIF: 192.168.146.44
-  dataLIF: 192.168.146.43
-  svm: prod-svm
+  managementLIF: 
+  dataLIF: 
+  svm: 
   spaceReserve: none
   defaults:
     snapshotReserve: "30"
-    exportPolicy: default
+    exportPolicy: 
   credentials:
     name: svm-cred
   labels:
-    svm: prod-svm
+    svm: 
