@@ -17,4 +17,4 @@ spec:
   credentials:
     name: svm-cred
   labels:
-    svm: 
+    type: nfs
