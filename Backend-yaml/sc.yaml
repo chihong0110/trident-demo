@@ -6,6 +6,6 @@ metadata:
   name: netapp-nfs
 provisioner: csi.trident.netapp.io
 parameters:
-  selector: "svm="
+  selector: "type=nfs"
 allowVolumeExpansion: true
 reclaimPolicy: Delete
