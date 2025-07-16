@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nfs-demo
+  name: nfs-demo
+  namespace: nfs-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nfs-demo
+  template:
+    metadata:
+      labels:
+        app: nfs-demo
+    spec:
+      volumes:
+      - name: test-pvc
+        persistentVolumeClaim:
+          claimName: nfs-pvc
+      terminationGracePeriodSeconds: 5
+      containers:
+      - image: busybox
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: TZ
+          value: "Asia/HongKong"
+        name: busybox
+        volumeMounts:
+        - name: test-pvc
+          mountPath: "/mnt"
+        command:
+          - sh 
+        args:
+          - -c
+          - |
+            while true; do
+              echo "$(date) $(hostname) nfs-test1" >> /mnt/shared.log
+              sleep 3
+            done
